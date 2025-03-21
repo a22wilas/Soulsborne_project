@@ -1,0 +1,51 @@
+[
+   {
+      "name":"Demon Souls",
+      "year":2009,
+      "difficulty":"5",
+      "rating":"6",
+      "runtime":"20 Hours"
+   },
+   {
+      "name":"Dark Souls",
+      "year":2011,
+      "difficulty":"6",
+      "rating":"1",
+      "runtime":"20 Hours"
+   },
+   {
+      "name":"Dark souls 2",
+      "year":2014,
+      "difficulty":"6",
+      "rating":"1",
+      "runtime":"20 Hours"
+   },
+   {
+      "name":"Bloodborne",
+      "year":2015,
+      "difficulty":"7",
+      "rating":"7",
+      "runtime":"25 Hours"
+   },
+   {
+      "name":"Dark souls 3",
+      "year":2016,
+      "difficulty":"6",
+      "rating":"8",
+      "runtime":"30 Hours"
+   },
+   {
+      "name":"Sekiro",
+      "year":2019,
+      "difficulty":"10",
+      "rating":"9",
+      "runtime":"30 Hours"
+   },
+   {
+      "name":"Elden ring",
+      "year":2022,
+      "difficulty":"8",
+      "rating":"10",
+      "runtime":"80 Hours"
+   }
+]

@@ -1,20 +1,17 @@
 package com.example.soulsborne_project;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Button;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
+import android.widget.Button;
+import android.content.Intent;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
@@ -33,7 +29,11 @@ public class MainActivity extends AppCompatActivity {
         RecyclerAdapter adapter = new RecyclerAdapter(this, itemList);
         recyclerView.setAdapter(adapter);
 
+        /* Load JSON */
         JsonTask jsonLoader = new JsonTask(this);
+        String json = jsonLoader.loadJson();
+        onPostExecute(json);
+
 
         /* Navigate to About activity*/
         Button btnAbout = findViewById(R.id.btnAbout);
@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
     }
+
+    /* Executes the Json into a Gson */
     private void onPostExecute(String json) {
         Log.d("MainActivity", json);
         Gson gson = new Gson();
